@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tetris</title>
+    <meta name="description" content="A high-quality, neon-styled Tetris block falling game.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>NEON TETRIS</h1>
+        </header>
+
+        <main class="game-layout">
+            <div class="game-info-left">
+                <div class="panel glass-panel">
+                    <h2>Controls</h2>
+                    <ul class="controls-list">
+                        <li><span>← / →</span> Move</li>
+                        <li><span>↑</span> Rotate</li>
+                        <li><span>↓</span> Soft Drop</li>
+                        <li><span>Space</span> Hard Drop</li>
+                        <li><span>P / Esc</span> Pause</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="game-board-container glass-panel">
+                <canvas id="tetris-board" width="300" height="600"></canvas>
+                <div id="game-over-overlay" class="hidden">
+                    <h2>GAME OVER</h2>
+                    <p>Score: <span id="final-score">0</span></p>
+                    <button id="restart-btn">Play Again</button>
+                </div>
+                <div id="pause-overlay" class="hidden">
+                    <h2>PAUSED</h2>
+                    <button id="resume-btn">Resume</button>
+                </div>
+            </div>
+
+            <div class="game-info-right">
+                <div class="panel glass-panel score-panel">
+                    <h2>Score</h2>
+                    <div id="score" class="score-display">0</div>
+                </div>
+                <div class="panel glass-panel next-piece-panel">
+                    <h2>Next</h2>
+                    <canvas id="next-piece" width="100" height="100"></canvas>
+                </div>
+                <div class="panel glass-panel level-panel">
+                    <h2>Level</h2>
+                    <div id="level" class="level-display">1</div>
+                </div>
+                <div class="panel glass-panel controls-panel">
+                    <button id="pause-btn" class="control-btn">Pause Game</button>
+                    <button id="sound-btn" class="control-btn">Sound: ON</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
